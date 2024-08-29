@@ -1,0 +1,42 @@
+<!-- This is an example page for CSS for the week 2 assignment on CSS -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CSS Styles Example</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Embedded CSS -->
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                line-height: 1.6;
+                background-color: #f4f4f4;
+            }
+            h1 {
+                color: darkred;
+                text-align: center;
+            }
+            p {
+                color: darkblue;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Inline styles for overriding embedded styles -->
+        <h1 style="color: darkgreen;">CSS Styling Example</h1>
+
+        <!-- Paragraph with embedded CSS applied -->
+        <p>This paragraph has the default embedded style applied.</p>
+
+        <!-- Paragraph with inline CSS that overrides the embedded style -->
+        <p style="color: darkorange; font-weight: bold;">This paragraph has inline styling that overrides the embedded style.</p>
+
+        <!-- Inline style example for a div -->
+        <div style="background-color: lightblue; padding: 10px;">
+            <p>This is a div with an inline style applied for background color and padding.</p>
+        </div>
+    </body>
+</html>

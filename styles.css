@@ -1,0 +1,39 @@
+/* External CSS file: styles.css */
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+    background-color: #e0f7fa;
+}
+
+/* Styling the main header */
+h1 {
+    color: darkgreen;
+    text-align: center;
+}
+
+/* Class for centering text */
+.center {
+    text-align: center;
+}
+
+/* ID for special emphasis */
+#emphasis {
+    color: red;
+    font-weight: bold;
+}
+
+/* Responsive design using media queries */
+@media (max-width: 600px) {
+    body {
+        background-color: #fff3e0;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    p {
+        font-size: 1em;
+    }
+}
