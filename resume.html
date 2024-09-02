@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume - Alexa Wenger</title>
+  <link rel="stylesheet" href="style.css"> 
+  <style>
+    /* Inline styles for the PDF display area */
+    .pdf-container {
+      width: 100%;
+      height: 210vh;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Resume</h1>
+  </header>
+     
+  <!-- Navigation Bar -->
+      <nav>
+        <ul class="topnav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <main>
+        <section class="resume-section">
+          <!-- Embed the PDF directly into the page -->
+          <embed src="resume.pdf" type="application/pdf" class="pdf-container">
+        </section>
+      </main>
+
+  <footer>
+    <p>&copy; 2024 Alexa Wenger</p>
+  </footer>
+
+  </body>
+</html>
