@@ -1,0 +1,97 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    background-color: #d0cfcf;
+    color: #333;
+  }
+  
+  header {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    height: 100vh;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .topnav {
+    background-color: #333;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .topnav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%;
+  }
+  
+  .topnav li {
+    position: relative;
+    display: inline-block;
+    flex-grow: 1;
+    text-align:center;
+  }
+  
+  .topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .topnav li a:hover {
+    background-color: #575757;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
+  footer .social-icons {
+    margin-top: 1rem;
+  }
+  
+  footer .social-icons a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+  
+  footer .social-icons a:hover {
+    color: #575757;
+  }
+  
+  profile-pic {
+    width: 10%;
+    height: 10%;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+  }

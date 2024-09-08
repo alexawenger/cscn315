@@ -3,24 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
   <title>Contact Me</title>
+  <script>
+    // Function to calculate the sum of two numbers entered by the user
+    function performCalculation(event) {
+      event.preventDefault(); // Prevent form from refreshing the page
+      const name = document.getElementById('calc-name').value; // Get the user's name
+      const num1 = parseFloat(document.getElementById('number1').value); // Get the first number
+      const num2 = parseFloat(document.getElementById('number2').value); // Get the second number
+      const result = num1 + num2; // Perform the calculation (sum)
+
+      // Display the result back to the user
+      const resultMessage = `Hello, ${name}! The sum of ${num1} and ${num2} is ${result}.`;
+      document.getElementById('calc-result').textContent = resultMessage;
+    }
+  </script>
 </head>
 <body>
   <header>
     <h1>Contact Me</h1>
   </header>
 
-      <!-- Navigation Bar -->
-      <nav>
-        <ul class="topnav">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+  <!-- Navigation Bar -->
+  <nav>
+    <ul class="topnav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
   <main>
     <h2>Get in Touch</h2>
@@ -33,6 +47,24 @@
       <textarea id="message" name="message" required></textarea><br><br>
       <input type="submit" value="Submit">
     </form>
+
+    <!-- New form for calculation -->
+    <h2>Calculation Form</h2>
+    <form onsubmit="performCalculation(event)">
+      <label for="calc-name">Name:</label><br>
+      <input type="text" id="calc-name" name="calc-name" required><br><br>
+
+      <label for="number1">Enter first number:</label><br>
+      <input type="number" id="number1" name="number1" required><br><br>
+
+      <label for="number2">Enter second number:</label><br>
+      <input type="number" id="number2" name="number2" required><br><br>
+
+      <input type="submit" value="Calculate">
+    </form>
+
+    <!-- Placeholder for the result -->
+    <p id="calc-result"></p>
   </main>
 
   <footer>
