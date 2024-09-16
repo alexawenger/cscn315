@@ -5,20 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <title>Contact Me</title>
-  <script>
-    // Function to calculate the sum of two numbers entered by the user
-    function performCalculation(event) {
-      event.preventDefault(); // Prevent form from refreshing the page
-      const name = document.getElementById('calc-name').value; // Get the user's name
-      const num1 = parseFloat(document.getElementById('number1').value); // Get the first number
-      const num2 = parseFloat(document.getElementById('number2').value); // Get the second number
-      const result = num1 + num2; // Perform the calculation (sum)
-
-      // Display the result back to the user
-      const resultMessage = `Hello, ${name}! The sum of ${num1} and ${num2} is ${result}.`;
-      document.getElementById('calc-result').textContent = resultMessage;
-    }
-  </script>
 </head>
 <body>
   <header>
@@ -37,38 +23,58 @@
   </nav>
 
   <main>
+    <!-- Existing Contact Form -->
     <h2>Get in Touch</h2>
-    <form action="submit_form.php" method="post">
+    <p>Please fill out the form below:</p>
+
+    <form id="contact-form">
       <label for="name">Name:</label><br>
-      <input type="text" id="name" name="name" required><br><br>
+      <input type="text" id="name" name="name"><br><br>
+
       <label for="email">Email:</label><br>
-      <input type="email" id="email" name="email" required><br><br>
+      <input type="email" id="email" name="email"><br><br>
+
       <label for="message">Message:</label><br>
-      <textarea id="message" name="message" required></textarea><br><br>
-      <input type="submit" value="Submit">
+      <textarea id="message" name="message"></textarea><br><br>
+
+      <button type="submit">Submit</button>
     </form>
 
-    <!-- New form for calculation -->
-    <h2>Calculation Form</h2>
-    <form onsubmit="performCalculation(event)">
-      <label for="calc-name">Name:</label><br>
-      <input type="text" id="calc-name" name="calc-name" required><br><br>
+    <!-- New Section: Developer Quiz Form -->
+    <h2>Developer Experience Quiz</h2>
+    <p>Test your developer experience level and type by filling out this form:</p>
 
-      <label for="number1">Enter first number:</label><br>
-      <input type="number" id="number1" name="number1" required><br><br>
+    <!-- Use onsubmit to call a function in proj3.js -->
+    <form id="experience-form" onsubmit="return handleQuizSubmit()">
+      <label for="years">Years of Experience:</label><br>
+      <input type="number" id="years" name="years" required><br><br>
 
-      <label for="number2">Enter second number:</label><br>
-      <input type="number" id="number2" name="number2" required><br><br>
+      <label for="language">Favorite Programming Language:</label><br>
+      <select id="language" name="language" required>
+        <option value="JavaScript">JavaScript</option>
+        <option value="Python">Python</option>
+        <option value="C++">C++</option>
+        <option value="Other">Other</option>
+      </select><br><br>
 
-      <input type="submit" value="Calculate">
+      <button type="submit">Submit Quiz</button>
     </form>
 
-    <!-- Placeholder for the result -->
-    <p id="calc-result"></p>
+    <!-- Output area for quiz results -->
+    <div id="quiz-output">
+      <p id="experience-level"></p>
+      <p id="developer-type"></p>
+    </div>
+
+
   </main>
 
   <footer>
-    <p>&copy; 2024 My Portfolio</p>
+    <p>&copy; 2024 Alexa Wenger</p>
   </footer>
+
+  <!-- Link to the external JavaScript file -->
+  <script src="proj3.js"></script>
+
 </body>
 </html>

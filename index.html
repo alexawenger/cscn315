@@ -26,6 +26,12 @@
     <section>
       <h2 id="welcome-message"></h2>
       <p>This is the home page of my professional portfolio website. Explore to know more about my projects, skills, and how to get in touch with me.</p>
+
+      <!-- Add a list of skills to display dynamically -->
+      <div id="skills-list">
+        <h3>Technical Skills:</h3>
+        <ul id="skills"></ul>
+      </div>
     </section>
   </main>
 
@@ -33,21 +39,8 @@
     <p>2024 Alexa Wenger</p>
   </footer>
 
-  <script>
-    // Define a variable to hold a welcome message
-    var welcomeMessage = "Alexa Wenger: Software Engineer and Data Scientist";
-
-    // Use getElementById to target the welcome-message element
-    document.getElementById("welcome-message").innerText = welcomeMessage;
-
-    // Basic JS styling
-    document.getElementById("welcome-message").style.color = "#004f20";
-    document.getElementById("welcome-message").style.fontSize = "24px";
-    document.getElementById("welcome-message").style.textAlign = "center";
-    // The code above changes the text and style of the welcome message
-  </script>
-
+  <!-- Link to the external JavaScript file -->
+  <script src="proj3.js"></script>
 
 </body>
-</html>
 </html>
