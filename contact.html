@@ -23,29 +23,18 @@
   </nav>
 
   <main>
-    <!-- Existing Contact Form
-    <h2>Get in Touch</h2>
-    <p>Please fill out the form below:</p>
-
-    <form id="contact-form">
-      <label for="name">Name:</label><br>
-      <input type="text" id="name" name="name"><br><br>
-
-      <label for="email">Email:</label><br>
-      <input type="email" id="email" name="email"><br><br>
-
-      <label for="message">Message:</label><br>
-      <textarea id="message" name="message"></textarea><br><br>
-
-      <button type="submit">Submit</button>
-    </form> -->
-
-    <!-- New Section: Developer Quiz Form -->
+    <!-- Developer Quiz Form with additional fields and validation -->
     <h2>Developer Experience Quiz</h2>
     <p>Test your developer experience level and type by filling out this form:</p>
 
-    <!-- Use onsubmit to call a function in proj3.js -->
-    <form id="experience-form" onsubmit="return handleQuizSubmit()">
+    <!-- Updated form with 6 fields and proper labels -->
+    <form id="experience-form" onsubmit="return handleQuizSubmit(event)">
+      <label for="name">Full Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="email">Email Address:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
       <label for="years">Years of Experience:</label><br>
       <input type="number" id="years" name="years" required><br><br>
 
@@ -57,6 +46,12 @@
         <option value="Other">Other</option>
       </select><br><br>
 
+      <label for="framework">Preferred Framework:</label><br>
+      <input type="text" id="framework" name="framework"><br><br>
+
+      <label for="github">GitHub Username:</label><br>
+      <input type="text" id="github" name="github" required><br><br>
+
       <button type="submit">Submit Quiz</button>
     </form>
 
@@ -65,8 +60,6 @@
       <p id="experience-level"></p>
       <p id="developer-type"></p>
     </div>
-
-
   </main>
 
   <footer>
@@ -75,6 +68,5 @@
 
   <!-- Link to the external JavaScript file -->
   <script src="proj3.js"></script>
-
 </body>
 </html>

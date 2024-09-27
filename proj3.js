@@ -9,46 +9,44 @@ skills.forEach(function(skill) {
   skillsList.appendChild(listItem);
 });
 
-// Function to handle the quiz form submission
-function handleQuizSubmit() {
-    // Get user input values
-    var yearsOfExperience = document.getElementById("years").value;
-    var favoriteLanguage = document.getElementById("language").value;
-  
-    // Determine experience level
-    var experienceMessage = "";
-    if (yearsOfExperience < 1) {
-      experienceMessage = "You are a beginner developer.";
-    } else if (yearsOfExperience >= 1 && yearsOfExperience < 5) {
-      experienceMessage = "You are an intermediate developer.";
+
+// Function to handle form submission
+function handleQuizSubmit(event) {
+  event.preventDefault(); // Prevent default form submission behavior
+
+  try {
+    // Get form values
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const years = parseInt(document.getElementById('years').value);
+    const language = document.getElementById('language').value;
+    const github = document.getElementById('github').value;
+
+    // Basic validation for years of experience
+    if (isNaN(years) || years < 0) {
+      throw new Error('Please enter a valid number of years.');
+    }
+
+    // Displaying results based on experience
+    const experienceOutput = document.getElementById('experience-level');
+    const typeOutput = document.getElementById('developer-type');
+
+    if (years < 2) {
+      experienceOutput.textContent = `${name}, you are a Junior Developer with experience in ${language}.`;
+    } else if (years <= 5) {
+      experienceOutput.textContent = `${name}, you are a Mid-Level Developer with expertise in ${language}.`;
     } else {
-      experienceMessage = "You are an advanced developer.";
+      experienceOutput.textContent = `${name}, you are a Senior Developer in ${language}.`;
     }
-  
-    // Output experience level
-    document.getElementById("experience-level").innerText = experienceMessage;
-  
-    // Determine developer type based on the favorite language
-    var developerTypeMessage = "";
-    switch (favoriteLanguage) {
-      case "JavaScript":
-        developerTypeMessage = "You are a web developer.";
-        break;
-      case "Python":
-        developerTypeMessage = "You are a data scientist or backend developer.";
-        break;
-      case "C++":
-        developerTypeMessage = "You are a systems or software developer.";
-        break;
-      default:
-        developerTypeMessage = "You are a versatile developer.";
-        break;
-    }
-  
-    // Output developer type
-    document.getElementById("developer-type").innerText = developerTypeMessage;
-  
-    // Return false to prevent the form from submitting and refreshing the page
-    return false;
+
+    typeOutput.textContent = `GitHub Username: ${github}. You should be proud of your work!`;
+
+    console.log("Form submitted successfully with no errors."); // Debugging log
+  } catch (error) {
+    // Display error message in the form
+    const experienceOutput = document.getElementById('experience-level');
+    experienceOutput.textContent = `Error: ${error.message}`;
+    
+    console.log(error); // Debugging log
   }
-  
+}
