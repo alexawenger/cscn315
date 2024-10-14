@@ -24,20 +24,43 @@
 
   <main>
     <h2>Get in Touch</h2>
-    <form action="submit_form.php" method="post">
+    <!-- Contact form with validation and multiple field types -->
+    <form id="contactForm" novalidate>
       <label for="name">Name:</label><br>
-      <input type="text" id="name" name="name" required><br><br>
+      <input type="text" name="name" placeholder="Your full name" required><br><br>
+
       <label for="email">Email:</label><br>
-      <input type="email" id="email" name="email" required><br><br>
+      <input type="email" name="email" placeholder="Your email address" required><br><br>
+
+      <label for="age">Age:</label><br>
+      <input type="number" name="age" placeholder="Your age" min="18" max="100" required><br><br>
+
+      <label for="contact-method">Preferred Contact Method:</label><br>
+      <select name="contact-method" required>
+        <option value="">Select a method</option>
+        <option value="email">Email</option>
+        <option value="phone">Phone</option>
+      </select><br><br>
+
       <label for="message">Message:</label><br>
-      <textarea id="message" name="message" required></textarea><br><br>
+      <textarea name="message" rows="4" placeholder="Your message" required></textarea><br><br>
+
+      <label for="newsletter">Subscribe to newsletter:</label>
+      <input type="checkbox" name="newsletter" value="yes"><br><br>
+
       <input type="submit" value="Submit">
     </form>
+
+    <!-- Output area for validation messages -->
+    <div id="form-messages"></div>
   </main>
 
   <footer>
     <p>&copy; 2024 Alexa Wenger</p>
   </footer>
+
+    <!-- External JS file link -->
+    <script src="proj6.js"></script>
 
 </body>
 </html>
