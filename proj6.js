@@ -47,3 +47,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
   
+
+//   Form validation is essential for preventing security vulnerabilities like Cross-Site Scripting (XSS) and 
+//   SQL injection attacks. By validating form inputs on both the client and server sides, we ensure that malicious 
+//   scripts cannot be executed by the browser or passed into the database. 
+  
+//   Without proper validation, an attacker could inject malicious code into form fields, potentially leading to 
+//   security breaches. This site could be vulnerable to XSS attacks if inputs such as the message or email fields are 
+//   not sanitized and validated properly before storing or processing them.
+
