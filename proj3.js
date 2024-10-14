@@ -1,15 +1,3 @@
-// 1. Array Example: A list of technical skills
-var skills = ["JavaScript", "Python", "C++", "C#", "SQL", "R"];
-
-// Populate the skills list dynamically in the HTML
-var skillsList = document.getElementById("skills");
-skills.forEach(function(skill) {
-  var listItem = document.createElement("li");
-  listItem.innerText = skill;
-  skillsList.appendChild(listItem);
-});
-
-
 // Function to handle form submission
 function handleQuizSubmit(event) {
   event.preventDefault(); // Prevent default form submission behavior

@@ -38,8 +38,26 @@
         <li><strong>Summer 2022</strong> Data Analyst at 717 Drone Guys</li>
       </ul>
     </section>
+    <!-- photos section -->
+    <section class="slideshow">
+      <h2>My Photos</h2>
+      <div class="image-container">
+        <img src="headshot.jpg" alt="Alexa's professional headshot" onclick="openLightbox(0)">
+        <img src="coding.jpg" alt="Alexa working on a project" onclick="openLightbox(1)">
+        <img src="webstaurant.jpg" alt="Alexa at her summer internship" onclick="openLightbox(2)">
+      </div>
+    </section>
   </main>
+
+  <!-- Lightbox Overlay Structure -->
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-content" id="expandedImg">
+    <div id="caption"></div>
+  </div>
 
   <footer>
     <p>&copy; 2024 Alexa Wenger</p>
   </footer>
+
+  <script src="proj5.js"></script>
