@@ -1,116 +1,124 @@
-/* Basic reset */
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.6;
-    background-color: #d0cfcf;
-    color: #333;
-  }
-  
-  header {
-    height: 100vh;
-    text-align: center;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  header h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .topnav {
-    background-color: #333;
-    overflow: hidden;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .topnav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between; 
-    align-items: center; 
-    width: 100%;
-  }
-  
-  .topnav li {
-    position: relative;
-    display: inline-block;
-    flex-grow: 1;
-    text-align:center;
-  }
-  
-  .topnav li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  .topnav li a:hover {
-    background-color: #575757;
-  }
-  
-  footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-  }
-  
-  footer .social-icons {
-    margin-top: 1rem;
-  }
-  
-  footer .social-icons a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-    font-size: 1.5rem;
-  }
-  
-  footer .social-icons a:hover {
-    color: #575757;
-  }
-  
-  profile-pic {
-    width: 10%;
-    height: 10%;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 0 auto;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  background-color: #d0cfcf;
+  color: #333;
+}
+
+header {
+  height: 100vh;
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.topnav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.topnav li {
+  position: relative;
+  display: inline-block;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.topnav li a:hover {
+  background-color: #575757;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+footer .social-icons {
+  margin-top: 1rem;
+}
+
+footer .social-icons a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+footer .social-icons a:hover {
+  color: #575757;
+}
+
+/* Correct selector for profile pic */
+.profile-pic {
+  width: 10%;
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  display: block; /* Center align */
+}
 
 /* Styles for the image gallery */
 .image-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between; /* Improved spacing */
+  flex-wrap: wrap;
+  gap: 1rem; /* Add space between images */
 }
 
 .image-container img {
   width: 30%;
   cursor: pointer;
-  transition: 0.3s;
+  transition: transform 0.3s;
   object-fit: cover; /* Prevents distortion */
+}
+
+.image-container img:hover {
+  transform: scale(1.1); /* Add hover effect for better interaction */
 }
 
 /* Lightbox overlay */
 .lightbox {
-  display: none; 
+  display: none;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -144,4 +152,78 @@
   color: white;
   font-size: 20px;
   margin-top: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem; /* Reduce font size on smaller screens */
+  }
+
+  .image-container img {
+    width: 45%; /* Adjust image size for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem; /* Further reduce font size on mobile */
+  }
+
+  .image-container img {
+    width: 100%; /* Full-width images on mobile */
+  }
+
+  .topnav li a {
+    padding: 10px 12px; /* Smaller padding for mobile nav */
+  }  
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+  width: 100%;
+  padding: 10px; 
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group label {
+  display: inline-block;
+  margin-bottom: 5px; /* Optional spacing between rows */
+}
+
+.form-group input[type="checkbox"] {
+  margin-right: 5px; /* Optional small space between checkbox and label text */
 }
