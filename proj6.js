@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
       const age = form.elements['age'].value.trim();
       const contactMethod = form.elements['contact-method'].value;
       const message = form.elements['message'].value.trim();
-      const newsletter = form.elements['newsletter'].checked;
   
       // Clear previous messages
       formMessages.textContent = '';
