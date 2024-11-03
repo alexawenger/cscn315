@@ -70,6 +70,8 @@ footer {
   color: white;
   text-align: center;
   padding: 1rem 0;
+ 
+
 }
 
 footer .social-icons {
@@ -226,4 +228,30 @@ form {
 
 .form-group input[type="checkbox"] {
   margin-right: 5px; /* Optional small space between checkbox and label text */
+}
+
+/* Default theme styles */
+body.default {
+  background-color: white;
+  color: black;
+}
+
+/* Dark theme styles */
+body.dark {
+  background-color: #525951;
+  color: #a1a5a1;
+}
+
+/* Light theme styles */
+body.light {
+  background-color: #f0f0f0;
+  color: #333333;
+}
+
+/* Additional themed elements */
+.header.dark, .footer.dark {
+  background-color: #333333;
+}
+.header.light, .footer.light {
+  background-color: #e0e0e0;
 }
