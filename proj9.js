@@ -28,8 +28,8 @@ function getQueryParam(param) {
   // Function to apply user preferences on page load
   function applyUserPreferences() {
     const welcomeMessageElement = document.getElementById("welcome-message");
-    const username = getCookie('username');
-    const theme = getCookie('theme');
+    const username = getCookie('username') || 'visitor'; // Default to 'visitor' if no username set
+    const theme = getCookie('theme') || 'default'; // Default to 'default' theme if none set
   
     if (username && welcomeMessageElement) {
       welcomeMessageElement.textContent = `Welcome back, ${username}!`;
