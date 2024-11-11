@@ -25,6 +25,25 @@
   <main>
     <h2>Project Portfolio</h2>
     <p>Details of my software engineering projects.</p>
+    
+    <!-- Game Container -->
+    <div class="game-container">
+      <h3>Memory Matching Game</h3>
+      <p>Drag each programming language to its matching primary characteristic.</p>
+      <div class="game-items">
+        <div id="item1" class="draggable" draggable="true">JavaScript</div>
+        <div id="item2" class="draggable" draggable="true">Python</div>
+        <div id="item3" class="draggable" draggable="true">C++</div>
+      </div>
+      
+      <div class="drop-zones">
+        <div id="zone1" class="drop-zone" data-match="item1">Browser Interpreted</div>
+        <div id="zone2" class="drop-zone" data-match="item2">Scripting</div>
+        <div id="zone3" class="drop-zone" data-match="item3">Object-Oriented</div>
+      </div>
+      
+      <div id="game-messages"></div>
+    </div>
   </main>
 
   <footer>
@@ -32,6 +51,7 @@
   </footer>
   
   <script src="proj9.js"></script>
+  <script src="proj10.js"></script>
 
 </body>
 </html>

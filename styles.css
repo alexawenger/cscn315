@@ -255,3 +255,30 @@ body.light {
 .header.light, .footer.light {
   background-color: #e0e0e0;
 }
+
+.game-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.draggable {
+  padding: 10px;
+  margin: 5px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  display: inline-block;
+}
+
+.drop-zone {
+  padding: 20px;
+  margin: 10px;
+  background-color: #e2e2e2;
+  border: 2px dashed #aaa;
+  min-width: 150px;
+  display: inline-block;
+}
+
+.drop-zone.matched {
+  background-color: #d4edda;
+}
