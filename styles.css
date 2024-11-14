@@ -282,3 +282,29 @@ body.light {
 .drop-zone.matched {
   background-color: #d4edda;
 }
+
+#joke {
+  padding: 15px;
+  margin-top: 20px;
+  width: 300px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#joke-info p {
+  margin: 5px 0;
+}
+
+#new-joke-btn {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#new-joke-btn:hover {
+  background-color: #005bb5;
+}
+
