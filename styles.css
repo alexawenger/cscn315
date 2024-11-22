@@ -1,43 +1,45 @@
-
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Global Styles */
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #d0cfcf;
+  background-color: #f9f9f9;
   color: #333;
 }
 
+/* Header */
 header {
   height: 10vh;
   text-align: center;
-  color: white;
+  color: rgb(16, 44, 14);
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #3e4e3e; /* Matches navigation */
 }
 
 header h1 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
+  color: white;
 }
 
+/* Navigation Bar */
 .topnav {
-  background-color: #333;
-  overflow: hidden;
-  position: sticky;
-  top: 0;
-  width: 100%;
+  list-style: none;
   display: flex;
   justify-content: center;
+  background-color: #3e4e3e;
 }
 
 .topnav ul {
-  list-style-type: none;
+  list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
@@ -47,7 +49,6 @@ header h1 {
 }
 
 .topnav li {
-  position: relative;
   display: inline-block;
   flex-grow: 1;
   text-align: center;
@@ -59,19 +60,19 @@ header h1 {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 .topnav li a:hover {
-  background-color: #575757;
+  background-color: #3e4e3e;
 }
 
+/* Footer */
 footer {
   background-color: #333;
   color: white;
   text-align: center;
   padding: 1rem 0;
- 
-
 }
 
 footer .social-icons {
@@ -89,7 +90,7 @@ footer .social-icons a:hover {
   color: #575757;
 }
 
-/* Correct selector for profile pic */
+/* Profile Picture */
 .profile-pic {
   width: 10%;
   height: auto; /* Maintain aspect ratio */
@@ -99,7 +100,7 @@ footer .social-icons a:hover {
   display: block; /* Center align */
 }
 
-/* Styles for the image gallery */
+/* Image Gallery */
 .image-container {
   display: flex;
   justify-content: space-between; /* Improved spacing */
@@ -110,7 +111,7 @@ footer .social-icons a:hover {
 .image-container img {
   width: 30%;
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease;
   object-fit: cover; /* Prevents distortion */
 }
 
@@ -118,7 +119,7 @@ footer .social-icons a:hover {
   transform: scale(1.1); /* Add hover effect for better interaction */
 }
 
-/* Lightbox overlay */
+/* Lightbox */
 .lightbox {
   display: none;
   position: fixed;
@@ -135,8 +136,6 @@ footer .social-icons a:hover {
   display: block;
   max-width: 90%; /* Ensures image doesn't exceed viewport width */
   max-height: 90%; /* Ensures image doesn't exceed viewport height */
-  width: auto;
-  height: auto;
   object-fit: contain; /* Prevents stretching and maintains aspect ratio */
 }
 
@@ -156,36 +155,37 @@ footer .social-icons a:hover {
   margin-top: 10px;
 }
 
-/* Responsive adjustments */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
   header h1 {
-    font-size: 2rem; /* Reduce font size on smaller screens */
+    font-size: 2rem;
   }
 
   .image-container img {
-    width: 45%; /* Adjust image size for tablets */
+    width: 45%;
   }
 }
 
 @media (max-width: 480px) {
   header h1 {
-    font-size: 1.5rem; /* Further reduce font size on mobile */
+    font-size: 1.5rem;
   }
 
   .image-container img {
-    width: 100%; /* Full-width images on mobile */
+    width: 100%;
   }
 
   .topnav li a {
-    padding: 10px 12px; /* Smaller padding for mobile nav */
-  }  
+    padding: 10px 12px;
+  }
 }
 
+/* Form Styling */
 .form-group input, 
 .form-group select, 
 .form-group textarea {
   width: 100%;
-  padding: 10px; 
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
@@ -203,17 +203,11 @@ footer .social-icons a:hover {
   margin-bottom: 15px;
 }
 
-.form-group label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
 form {
   background-color: white;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 600px;
   margin: 0 auto;
   display: flex;
@@ -221,41 +215,23 @@ form {
   align-items: center;
 }
 
-.form-group label {
-  display: inline-block;
-  margin-bottom: 5px; /* Optional spacing between rows */
-}
-
-.form-group input[type="checkbox"] {
-  margin-right: 5px; /* Optional small space between checkbox and label text */
-}
-
-/* Default theme styles */
+/* Themed Body Styles */
 body.default {
   background-color: white;
   color: black;
 }
 
-/* Dark theme styles */
 body.dark {
   background-color: #525951;
   color: #a1a5a1;
 }
 
-/* Light theme styles */
 body.light {
   background-color: #f0f0f0;
   color: #333333;
 }
 
-/* Additional themed elements */
-.header.dark, .footer.dark {
-  background-color: #333333;
-}
-.header.light, .footer.light {
-  background-color: #e0e0e0;
-}
-
+/* Game Section */
 .game-container {
   padding: 20px;
   text-align: center;
@@ -283,14 +259,15 @@ body.light {
   background-color: #d4edda;
 }
 
+/* Joke Section */
 #joke {
   padding: 15px;
   margin-top: 20px;
   width: 300px;
   text-align: center;
   margin: 0 auto;
-  position: relative; /* Allows smooth sliding in from left */
-  transition: all 0.5s ease-in-out; /* Smooth transition */
+  position: relative;
+  transition: all 0.5s ease-in-out;
 }
 
 #joke-info p {
@@ -300,13 +277,344 @@ body.light {
 #new-joke-btn {
   margin-top: 10px;
   padding: 5px 10px;
-  background-color: #0073e6;
+  background-color: #3e4e3e;
   color: white;
   border: none;
   cursor: pointer;
 }
 
 #new-joke-btn:hover {
-  background-color: #005bb5;
+  background-color: #3e4e3e;
+}
+
+/* Intro Section */
+.intro-section {
+  padding: 20px;
+  background-color: #f0f8ff;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.intro-box {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  line-height: 1.8;
+}
+
+.intro-box h2 {
+  color: #3e4e3e;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+/* Skills Section */
+.skills-section {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.skills-list {
+  list-style: none;
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.skills-list li {
+  padding: 5px 0;
+}
+
+/* Footer Icons */
+.social-icons {
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.social-icons a:hover {
+  color: #575757;
+}
+
+/* Bio Section */
+.bio-section {
+  padding: 20px;
+  text-align: center;
+  background-color: #cedcce;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bio-info {
+  max-width: 800px;
+  margin: auto;
+}
+
+.bio-info h2 {
+  color: #3e4e3e;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+/* Work Experience Section */
+.work-experience {
+  padding: 20px;
+  background-color: #ffffff;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.experience-box {
+  max-width: 800px;
+  margin: auto;
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+}
+
+.timeline li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.timeline li:last-child {
+  border-bottom: none;
+}
+
+/* Photos Section */
+.photos-section {
+  padding: 20px;
+  text-align: center;
+}
+
+.image-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.image-container img {
+  width: 30%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.image-container img:hover {
+  transform: scale(1.1);
+}
+
+/* Portfolio Section */
+.portfolio-section {
+  text-align: center;
+  padding: 20px;
+  background-color: #c3d3c3;
+  border-radius: 10px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-section h2 {
+  color: #3e4e3e;
+}
+
+/* Game Section */
+.game-section {
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.game-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.game-items {
+  display: flex;
+  gap: 10px;
+}
+
+.draggable {
+  padding: 10px;
+  margin: 5px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.drop-zone {
+  padding: 15px;
+  margin: 5px;
+  background-color: #e2e2e2;
+  border: 2px dashed #aaa;
+  border-radius: 5px;
+}
+
+.drop-zone.matched {
+  background-color: #d4edda;
+}
+
+/* Joke Section */
+.joke-section {
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#joke {
+  padding: 15px;
+  margin: 20px auto;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+}
+
+#new-joke-btn {
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #3e4e3e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#new-joke-btn:hover {
+  background-color: #3e4e3e;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2 {
+  text-align: center;
+  color: #3e4e3e;
+}
+
+.contact-section p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.selected-skills {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.form-group input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* General Section Styling */
+.chart-section {
+  text-align: center;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chart-section h2 {
+  font-size: 2rem;
+  color: #3e4e3e;
+  margin-bottom: 10px;
+}
+
+.chart-section p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.chart-section a {
+  color: #3e4e3e;
+  text-decoration: none;
+}
+
+.chart-section a:hover {
+  text-decoration: underline;
+}
+
+/* Chart Container */
+.chart-container {
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 

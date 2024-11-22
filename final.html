@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Chart Demo</title>
+  <!-- Link to Chart.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <ul class="topnav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="final.html">Charts</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Chart Visualization</h1>
+  </header>
+
+  <main>
+    <section class="chart-section">
+      <h2>Joke Categories Distribution</h2>
+      <p>
+        This chart demonstrates a breakdown of joke categories fetched from the 
+        <a href="https://official-joke-api.appspot.com" target="_blank">Official Joke API</a>.
+      </p>
+
+      <!-- Chart Container -->
+      <div class="chart-container">
+        <canvas id="jokeChart"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Alexa Wenger. All rights reserved.</p>
+  </footer>
+  
+  <!-- Link to the external JavaScript file -->
+  <script src="final.js"></script>
+</body>
+</html>

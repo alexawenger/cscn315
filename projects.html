@@ -7,63 +7,69 @@
   <title>My Projects</title>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav>
-      <ul class="topnav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- Navigation Bar -->
+  <nav>
+    <ul class="topnav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="final.html">Charts</a></li>
+    </ul>
+  </nav>
 
   <header>
     <h1>My Projects</h1>
   </header>
 
   <main>
-    <h2>Project Portfolio</h2>
-    <p>Details of my software engineering projects.</p>
-    
-    <!-- Game Container -->
-    <div class="game-container">
-      <h3>Memory Matching Game</h3>
-      <p>Drag each programming language to its matching primary characteristic.</p>
-      <div class="game-items">
-        <div id="item1" class="draggable" draggable="true">JavaScript</div>
-        <div id="item2" class="draggable" draggable="true">Python</div>
-        <div id="item3" class="draggable" draggable="true">C++</div>
-      </div>
-      
-      <div class="drop-zones">
-        <div id="zone1" class="drop-zone" data-match="item1">Browser Interpreted</div>
-        <div id="zone2" class="drop-zone" data-match="item2">Scripting</div>
-        <div id="zone3" class="drop-zone" data-match="item3">Object-Oriented</div>
-      </div>
-      
-      <div id="game-messages"></div>
-    </div>
-
-    <!-- Joke Section for Displaying API Data -->
-    <section id="joke" style="display: none;">
-      <h3>Random Joke API</h3>
-      <div id="joke-info">Loading a random joke...</div>
-      <button id="new-joke-btn">Get Another Joke</button>
+    <!-- Project Portfolio Section -->
+    <section class="portfolio-section">
+      <h2>Project Portfolio</h2>
+      <p>
+        Welcome to my portfolio! Below, you'll find interactive projects that showcase my software engineering skills, creativity, and use of external APIs.
+      </p>
     </section>
 
+    <!-- Game Section -->
+    <section class="game-section">
+      <h2>Memory Matching Game</h2>
+      <p>Drag each programming language to its matching primary characteristic.</p>
+      <div class="game-container">
+        <div class="game-items">
+          <div id="item1" class="draggable" draggable="true">JavaScript</div>
+          <div id="item2" class="draggable" draggable="true">Python</div>
+          <div id="item3" class="draggable" draggable="true">C++</div>
+        </div>
+        <div class="drop-zones">
+          <div id="zone1" class="drop-zone" data-match="item1">Browser Interpreted</div>
+          <div id="zone2" class="drop-zone" data-match="item2">Scripting</div>
+          <div id="zone3" class="drop-zone" data-match="item3">Object-Oriented</div>
+        </div>
+        <div id="game-messages"></div>
+      </div>
+    </section>
+
+    <!-- Joke Section -->
+    <section class="joke-section">
+      <h2>Random Joke API</h2>
+      <div id="joke">
+        <p id="joke-info">Loading a random joke...</p>
+        <button id="new-joke-btn">Get Another Joke</button>
+      </div>
+    </section>
   </main>
 
   <footer>
     <p>&copy; 2024 My Portfolio</p>
   </footer>
-  <!-- Link to the jQuery library -->
+
+  <!-- External Scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="proj9.js"></script>
   <script src="proj10.js"></script>
   <script src="proj11.js"></script>
   <script src="jquery.js"></script>
-
-
 </body>
 </html>

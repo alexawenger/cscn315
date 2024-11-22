@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <title>My Portfolio</title>
+  <title>Alexa Wenger - Portfolio</title>
 </head>
 <body>
   <!-- Navigation Bar -->
@@ -15,54 +15,50 @@
       <li><a href="projects.html">Projects</a></li>
       <li><a href="resume.html">Resume</a></li>
       <li><a href="contact.html">Contact</a></li>
+      <li><a href="final.html">Charts</a></li>
     </ul>
   </nav>
-
   <header>
-    <h1>Alexa Wenger</h1>
+    <h1>Welcome to My Portfolio</h1>
   </header>
 
   <main>
-    <section>
-      <h2 id="welcome-message"></h2>
-      <p>This is the home page of my professional portfolio website. Explore to know more about my projects, skills, and how to get in touch with me.</p>
-
-      <!-- Add a list of skills to display dynamically -->
-      <div id="skills-list">
-        <h3>Technical Skills:</h3>
-        <ul id="skills"></ul>
+    <section class="intro-section">
+      <div class="intro-box">
+        <h2>Hello, I'm Alexa Wenger</h2>
+        <p>
+          I am a software engineer and data scientist with a passion for solving complex problems and creating innovative solutions. 
+          With expertise in programming languages like JavaScript, Python, and SQL, I have developed applications that bridge the gap 
+          between technical efficiency and user-centric design. My portfolio highlights my journey of learning, building, and exploring 
+          the dynamic field of technology.
+        </p>
+        <p>
+          Feel free to explore this site to learn more about my professional background, personal projects, and how to get in touch with me. 
+          Whether you're here to collaborate, hire, or simply connect, I look forward to hearing from you!
+        </p>
       </div>
+    </section>
+
+    <section id="skills-list" class="skills-section">
+      <h3>Technical Skills</h3>
+      <ul class="skills-list">
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>C++</li>
+        <li>C#</li>
+        <li>SQL</li>
+        <li>R</li>
+      </ul>
     </section>
   </main>
 
   <footer>
-    <p>2024 Alexa Wenger</p>
+    <p>&copy; 2024 Alexa Wenger. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://github.com" target="_blank">GitHub</a>
+      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+    </div>
   </footer>
-
-  <script> // 1. Array Example: A list of technical skills
-    var skills = ["JavaScript", "Python", "C++", "C#", "SQL", "R"];
-    
-    // Populate the skills list dynamically in the HTML
-    var skillsList = document.getElementById("skills");
-    skills.forEach(function(skill) {
-      var listItem = document.createElement("li");
-      listItem.innerText = skill;
-      skillsList.appendChild(listItem);
-    });
-  </script>
-  <script src="proj9.js"></script>
-
+  
 </body>
 </html>
-
-
-<!-- In this project, I applied several debugging techniques from browser development tools. 
- I used console.log to track form submission steps and error handling. This helped me ensure
-  that form values were being captured correctly, and that the right output was displayed based 
-  on conditions. Using the browser's JavaScript console, I was able to spot incorrect values
-   and follow the code execution flow, especially within the try-catch block. This allowed me
-    to capture and handle any exceptions without breaking the form submission.
-
-In addition, I explored Breakpoints in the DevTools, which allowed me to pause the code execution
- at specific lines and inspect the value of variables step-by-step. I also used Network tab to
-  make sure that no unnecessary network calls were being made during form submission. -->
